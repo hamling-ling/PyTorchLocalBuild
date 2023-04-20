@@ -55,10 +55,11 @@ sudo systemctl restart docker
     USE_XNNPACK=0 BUILD_CUSTOM_PROTOBUF=ON \
     python setup.py bdist_wheel
     ```
-    This took about 30 min in my machine. Note that USE_DISTRIBUTED=1 is necessary to avoid "pytorch_lightning 'torch._c' is not a package" if you use pytorch_lightning.
+    This took about 30 min in my machine. Note that USE_DISTRIBUTED=1 is necessary to avoid "pytorch_lightning 'torch._c' is not a package" error if you use pytorch_lightning.
 
-6. Copy why to host machine
-   In your host machine, copy the whl
-   ```
-   cp SOMEWHERE/pytorch/dist//torch-1.9.0a0+gitunknown-cp38-cp38-linux_x86_64.whl YOUR_DESTINATION
-   ```
+6. Copy whl to host machine
+
+    In your host machine, copy the whl to your favored location.
+    ```
+    cp SOMEWHERE/pytorch/dist/torch-1.9.0a0+gitunknown-cp38-cp38-linux_x86_64.whl YOUR_DESTINATION
+    ```
